@@ -1,0 +1,6 @@
+{
+  "name": "TrendCart - Fashion & Lifestyle Store",
+  "description": "Modern responsive e-commerce shopping destination for curated fashion, apparel, and lifestyle electronics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
