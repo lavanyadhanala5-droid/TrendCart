@@ -292,6 +292,18 @@ export const Navbar: React.FC = () => {
             )}
           </div>
 
+          {/* AI Assistant Chat Trigger */}
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new CustomEvent('open-trendcart-chat'))}
+            aria-label="Open AI Shopping Concierge"
+            title="Chat with Nathan (AI Concierge)"
+            className="p-2 text-stone-700 hover:text-stone-900 rounded-full hover:bg-stone-100 transition-colors relative"
+          >
+            <Sparkles className="w-5 h-5 text-amber-700 stroke-[1.75]" />
+            <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-emerald-500 rounded-full ring-2 ring-white" />
+          </button>
+
           {/* Wishlist Button */}
           <button
             type="button"
@@ -418,6 +430,20 @@ export const Navbar: React.FC = () => {
                 )}
               </button>
             ))}
+            <button
+              type="button"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                window.dispatchEvent(new CustomEvent('open-trendcart-chat'));
+              }}
+              className="flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium bg-amber-50/80 text-amber-950 border border-amber-200/60 transition-colors"
+            >
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-amber-700" />
+                <span>Chat with Nathan (AI Concierge)</span>
+              </div>
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+            </button>
           </nav>
 
           <div className="pt-3 border-t border-stone-100 flex flex-col gap-2">

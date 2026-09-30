@@ -67,44 +67,60 @@ export const ContactView: React.FC = () => {
 
       {/* Contact Channels Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-        <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-2xs flex flex-col items-center text-center">
-          <div className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-800 mb-3">
-            <Mail className="w-5 h-5" />
+        <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-2xs flex flex-col items-center text-center justify-between">
+          <div className="flex flex-col items-center">
+            <div className="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center mb-3">
+              <MessageSquare className="w-5 h-5" />
+            </div>
+            <h3 className="text-sm font-semibold text-stone-900">Live AI Concierge</h3>
+            <p className="text-xs text-stone-500 mt-1 mb-3">Instant answers with Nathan</p>
           </div>
-          <h3 className="text-sm font-semibold text-stone-900">Email Concierge</h3>
-          <p className="text-xs text-stone-500 mt-1 mb-2">Typically replies within 2 hours</p>
+          <button
+            type="button"
+            onClick={() => {
+              window.dispatchEvent(new CustomEvent('open-trendcart-chat'));
+            }}
+            className="w-full py-2 px-3 bg-stone-900 hover:bg-stone-800 text-white rounded-lg text-xs font-semibold transition-colors"
+          >
+            Chat Now
+          </button>
+        </div>
+
+        <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-2xs flex flex-col items-center text-center justify-between">
+          <div className="flex flex-col items-center">
+            <div className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-800 mb-3">
+              <Mail className="w-5 h-5" />
+            </div>
+            <h3 className="text-sm font-semibold text-stone-900">Email Concierge</h3>
+            <p className="text-xs text-stone-500 mt-1 mb-2">Replies within 2 hours</p>
+          </div>
           <a href="mailto:support@trendcart.com" className="text-xs font-bold text-stone-900 hover:underline">
             support@trendcart.com
           </a>
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-2xs flex flex-col items-center text-center">
-          <div className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-800 mb-3">
-            <Phone className="w-5 h-5" />
+        <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-2xs flex flex-col items-center text-center justify-between">
+          <div className="flex flex-col items-center">
+            <div className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-800 mb-3">
+              <Phone className="w-5 h-5" />
+            </div>
+            <h3 className="text-sm font-semibold text-stone-900">Toll-Free Hotline</h3>
+            <p className="text-xs text-stone-500 mt-1 mb-2">Mon–Fri 8:00 AM – 8:00 PM EST</p>
           </div>
-          <h3 className="text-sm font-semibold text-stone-900">Toll-Free Hotline</h3>
-          <p className="text-xs text-stone-500 mt-1 mb-2">Mon–Fri 8:00 AM – 8:00 PM EST</p>
           <a href="tel:+18008736322" className="text-xs font-bold text-stone-900 hover:underline">
             +1 (800) 873-6322
           </a>
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-2xs flex flex-col items-center text-center">
-          <div className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-800 mb-3">
-            <MapPin className="w-5 h-5" />
+        <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-2xs flex flex-col items-center text-center justify-between">
+          <div className="flex flex-col items-center">
+            <div className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-800 mb-3">
+              <MapPin className="w-5 h-5" />
+            </div>
+            <h3 className="text-sm font-semibold text-stone-900">Flagship Studio</h3>
+            <p className="text-xs text-stone-500 mt-1 mb-2">Soho Architectural Studio</p>
           </div>
-          <h3 className="text-sm font-semibold text-stone-900">Flagship Studio</h3>
-          <p className="text-xs text-stone-500 mt-1 mb-2">Soho Architectural Studio</p>
-          <p className="text-xs font-bold text-stone-900">450 Broadway, New York, NY</p>
-        </div>
-
-        <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-2xs flex flex-col items-center text-center">
-          <div className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-800 mb-3">
-            <Clock className="w-5 h-5" />
-          </div>
-          <h3 className="text-sm font-semibold text-stone-900">Dispatch Window</h3>
-          <p className="text-xs text-stone-500 mt-1 mb-2">Fast order packaging</p>
-          <p className="text-xs font-bold text-stone-900">Orders dispatch in 24 hours</p>
+          <p className="text-xs font-bold text-stone-900">450 Broadway, New York</p>
         </div>
       </div>
 

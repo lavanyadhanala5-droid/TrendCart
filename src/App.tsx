@@ -12,6 +12,7 @@ import { ContactView } from './components/ContactView';
 import { Footer } from './components/Footer';
 import { AuthModal } from './components/AuthModal';
 import { ToastContainer } from './components/ToastContainer';
+import { N8nChatWidget } from './components/N8nChatWidget';
 
 const MainContent: React.FC = () => {
   const { activePage } = useStore();
@@ -41,6 +42,7 @@ export default function App() {
         <MainContent />
         <AuthModal />
         <ToastContainer />
+        <N8nChatWidget />
       </div>
     </StoreProvider>
   );
